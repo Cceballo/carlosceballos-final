@@ -6,9 +6,9 @@
  * Grado: Quinto
  * Sección: EB5AV
  * Curso: Taller de electronica digital y reparación de computadoras I
- * Nombres: Luis Alvarado, Carlos Argueta, Pablo Canel, Kevin Solano, Carlos Ceballos, Josué Laroj
- * Carnet: 2022219, 2022334, 2022344 , 2022... , 2022... , 2022331
- * Proyecto: Casa Domotica con Sistema de seguridad 
+ * Nombres:  Carlos Ceballos, 
+ * Carnet: 2022337
+ * Proyecto: final
 */
 
 
