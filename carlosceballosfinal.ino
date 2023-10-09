@@ -68,12 +68,7 @@ case 'A':
   Serial.println("para medir otra cosa solo pon c");
   texto();
 
- MT=false;
-break;
 
-case 'V':
-Vol();
-break; 
 
 case 'R':
 medicionR();
@@ -84,6 +79,12 @@ float Idc=calculoCorriente(100);
 Serial.print("CORRIENTE RESULTADO ");
 Serial.println(Idc, 3);
 delay(100);
+   MT=false;
+break;
+
+case 'V':
+Vol();
+break; 
 break;
     
 }
