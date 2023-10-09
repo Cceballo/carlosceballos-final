@@ -19,13 +19,13 @@ String msg;
 
 
 #define DV A0
-#define sensorVoltajepin A1      
+#define sensorVoltaje A1      
 
 unsigned int raw_sensor = 0;
 int texto();
 int medicionR();
-int Divisor;
-int Vol();
+int divisor;
+int Vol(); 
 
 
 bool MT = true;
@@ -39,7 +39,7 @@ float R2=10000;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(sensorVoltajepin, INPUT);    
+  pinMode(sensorVoltaje, INPUT);    
 
 }
 
@@ -62,9 +62,9 @@ case 'A':
   Serial.println("menu de opciones");
   Serial.println("Para medir resistencia pon R");
   Serial.println("para medir otra cosa solo pon r");
-  Serial.println("para medir voltaje pon V");
+  Serial.println("para medir voltaje pon v");
   Serial.println("para medir otra cosa solo pon v");
-  Serial.println("para medir corriente por C");  
+  Serial.println("para medir corriente por c");  
   Serial.println("para medir otra cosa solo pon c");
   texto();
 
@@ -81,7 +81,7 @@ break;
   
 case 'C':
 float Idc=calculoCorriente(100);
-Serial.print("corriente: ");
+Serial.print("CORRIENTE RESULTADO ");
 Serial.println(Idc, 3);
 delay(100);
 break;
@@ -97,8 +97,8 @@ if(Divisor)
 {
    Vt=analogRead(DV);
    Vt=Vt*5/1023;
-   R1=(R2*5/Vt)-(R2);
-   Serial.println(R1);
+   R1=(R2*5/Vt)-(R1);
+   Serial.println(R2);
    delay(2000);
   {
   }
@@ -106,7 +106,7 @@ if(Divisor)
    
     
   } else {
-    Serial.println("no hay resistencia");
+    Serial.println("noresistencia");
     delay(500);
     return 0;
     }
